@@ -1,0 +1,17 @@
+[package]
+name = "dominant_color"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.85"
+wasm-bindgen-futures = "0.4.35"
+web-sys = { version = "0.3.62", features = ['ImageData','CanvasRenderingContext2d', 'Document', 'Element', 'HtmlCanvasElement', 'Window', "HtmlImageElement"] }
+
+
+[profile.release]
+lto = true
